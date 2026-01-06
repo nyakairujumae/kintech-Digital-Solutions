@@ -239,23 +239,103 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header center">
                 <span class="section-label">Our Work</span>
                 <h2 class="section-title">Projects & <span class="text-gradient">Case Studies</span></h2>
+                <p class="section-subtitle">Examples of the types of systems and interfaces we build</p>
             </div>
-            <div class="projects-intro">
-                <div class="projects-note">
-                    <div class="note-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
+
+            <!-- Project Gallery -->
+            <div class="project-gallery">
+                <!-- Mobile Apps Category -->
+                <div class="gallery-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">📱</span>
+                        Mobile Applications
+                    </h3>
+                    <div class="gallery-grid mobile-grid">
+                        <div class="gallery-item" onclick="openLightbox(this)">
+                            <img src="assets/mockups/Believe iOS 13.png" alt="Community Platform Mobile App" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Community Platform</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(this)">
+                            <img src="assets/projects/Orbit iOS 6.png" alt="Subscription Management App" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Subscription Manager</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(this)">
+                            <img src="assets/mockups/Believe iOS 15.png" alt="Social Features Mobile" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Social Features</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(this)">
+                            <img src="assets/projects/Orbit iOS 0.png" alt="Finance Tracking App" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Finance Tracking</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(this)">
+                            <img src="assets/mockups/Believe iOS 17.png" alt="User Engagement Features" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Engagement Features</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(this)">
+                            <img src="assets/projects/Orbit iOS 22.png" alt="Mobile Dashboard" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Mobile Dashboard</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="note-content">
-                        <h4>Client Confidentiality</h4>
-                        <p>To respect client confidentiality, not all work is publicly listed. However, we provide detailed demos and documentation during the discovery phase.</p>
+                </div>
+
+                <!-- Web Platforms Category -->
+                <div class="gallery-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">💻</span>
+                        Web Platforms & Dashboards
+                    </h3>
+                    <div class="gallery-grid web-grid">
+                        <div class="gallery-item wide" onclick="openLightbox(this)">
+                            <img src="assets/projects/Evernote Web 51.png" alt="Project Management Dashboard" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Project Management System</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item wide" onclick="openLightbox(this)">
+                            <img src="assets/mockups/Remote Web 56.png" alt="HR Management Platform" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">HR & Team Management</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item wide" onclick="openLightbox(this)">
+                            <img src="assets/projects/Evernote Web 68.png" alt="Notes & Documentation System" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Documentation System</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item wide" onclick="openLightbox(this)">
+                            <img src="assets/projects/Hers Web 15.png" alt="Business Dashboard" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-label">Business Dashboard</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Lightbox Modal -->
+            <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+                <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+                <img src="" alt="Project Preview" id="lightbox-img">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
+            </div>
+
+            <!-- What We Offer -->
             <div class="projects-offerings">
                 <div class="offering-card">
                     <div class="offering-icon">📌</div>
@@ -273,6 +353,7 @@
                     <p>Detailed roadmaps before any commitment is made</p>
                 </div>
             </div>
+
             <div class="projects-current">
                 <h3>Currently Developing</h3>
                 <div class="current-projects">

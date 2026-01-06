@@ -268,6 +268,37 @@ function initCurrentYear() {
 }
 
 // ========================================
+// Lightbox for Project Gallery
+// ========================================
+function openLightbox(element) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    
+    const img = element.querySelector('img');
+    const label = element.querySelector('.gallery-label');
+    
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = label ? label.textContent : '';
+    
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+// ========================================
 // Active Navigation Link Highlight
 // ========================================
 window.addEventListener('scroll', () => {
