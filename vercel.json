@@ -1,17 +1,7 @@
 {
   "version": 2,
   "name": "kintech-digital-solutions",
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false
 }
-
